@@ -1,0 +1,9 @@
+$color-primary: #09b054;
+$color-secondary: #ff9900;
+$color-accent: #6599ff;
+$color-accent-secondary: #ffde00;
+$color-text-accent: #097054;
+
+@mixin lato {
+  font-family: "Lato", sans-serif;
+}
