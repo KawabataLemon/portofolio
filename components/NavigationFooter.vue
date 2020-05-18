@@ -45,7 +45,7 @@ export default Vue.extend({
     background: $color-accent;
     border-radius: 50px 0 0 0;
     .navBarContainer {
-      height: 100px;
+      height: 60px;
       background: $color-accent;
       min-width: 320px;
       max-width: 480px;
