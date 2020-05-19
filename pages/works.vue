@@ -15,20 +15,20 @@
       template(v-slot:front)
         .cardBase
           .imgWrapper
-            img(src="../static/pairs.png").logo
-      template(v-slot:back)
-        .cardBase
-          .imgWrapper
-            img(src="../static/pairs.png").backlogo
-    flip-card
-      template(v-slot:front)
-        .cardBase
-          .imgWrapper
             img(src="../static/xb.png").logo
       template(v-slot:back)
         .cardBase
           .imgWrapper
             img(src="../static/xb.png").backlogo
+    flip-card
+      template(v-slot:front)
+        .cardBase
+          .imgWrapper
+            img(src="../static/pairs.png").logo
+      template(v-slot:back)
+        .cardBase
+          .imgWrapper
+            img(src="../static/pairs.png").backlogo
     flip-card
       template(v-slot:front)
         .cardBase
