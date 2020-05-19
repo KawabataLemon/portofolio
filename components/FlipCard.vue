@@ -79,12 +79,10 @@ export default Vue.extend({
 
   .front {
     z-index: 2;
-    background-color: white;
   }
 
   .back {
     transform: rotateY(180deg);
-    background-color: white;
   }
 
 </style>
