@@ -6,6 +6,15 @@
       template(v-slot:front)
         .cardBase
           .imgWrapper
+            img(src="../static/cn.png").logo
+      template(v-slot:back)
+        .cardBase
+          .imgWrapper
+            img(src="../static/cn.png").backlogo
+    flip-card
+      template(v-slot:front)
+        .cardBase
+          .imgWrapper
             img(src="../static/pairs.png").logo
       template(v-slot:back)
         .cardBase
@@ -15,11 +24,11 @@
       template(v-slot:front)
         .cardBase
           .imgWrapper
-            img(src="../static/bw.png").logo
+            img(src="../static/xb.png").logo
       template(v-slot:back)
         .cardBase
           .imgWrapper
-            img(src="../static/bw.png").backlogo
+            img(src="../static/xb.png").backlogo
     flip-card
       template(v-slot:front)
         .cardBase
@@ -33,11 +42,11 @@
       template(v-slot:front)
         .cardBase
           .imgWrapper
-            img(src="../static/cn.png").logo
+            img(src="../static/bw.png").logo
       template(v-slot:back)
         .cardBase
           .imgWrapper
-            img(src="../static/cn.png").backlogo
+            img(src="../static/bw.png").backlogo
     flip-card
       template(v-slot:front)
         .cardBase
@@ -79,6 +88,12 @@ export default Vue.extend({
   min-height: 100vh;
   background: linear-gradient(to left, $color-primary, $color-secondary);
   .contents{
+    @include mq-down() {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
     .cardBase {
       height: 100%;
       width: 100%;
