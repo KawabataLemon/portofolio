@@ -26,6 +26,7 @@ export default Vue.extend({
 })
 </script>
 <style lang="scss" scoped>
+@import '../assets/mixin';
 
 @mixin size($x, $y) {
   width: $x;
@@ -37,6 +38,10 @@ export default Vue.extend({
       position: relative;
       width: 400px;
       height: 300px;
+      @include mq-down() {
+        width: 300px;
+        height: 200px;
+      }
       margin: 24px;
       perspective: 1000px;
       transition: 0.4s;
