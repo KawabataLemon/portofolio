@@ -12,6 +12,11 @@
           .cardBase
             .imgWrapper
               img(src="../static/cn.png").backlogo
+            .descriptionWrapperSp
+              .servicePositionHeader
+                h3 Coiney
+                span Client Team Manager, iOS Engineer
+              span 対面型決済サービス「Coiney」の開発に携わる。heyのSTORESブランドの統合やチームマネジメント、コロナ下でのチームの動き方改善などを行う。現職。
       .descriptionWrapper
         .servicePositionHeader
           h3 Coiney
@@ -27,6 +32,11 @@
           .cardBase
             .imgWrapper
               img(src="../static/xb.png").backlogo
+            .descriptionWrapperSp
+              .servicePositionHeader
+                h3 xenoBrain
+                span Web Engineer
+              span AIビジネス将来予測形SaaS「xenoBrain」の開発に携わる。新機能開発や、Webフレームワークの導入、開発プロセス改善にも貢献。またWebエンジニアとしてのスキルをみにつける。
       .descriptionWrapper
         .servicePositionHeader
           h3 xenoBrain
@@ -42,6 +52,11 @@
           .cardBase
             .imgWrapper
               img(src="../static/pairs.png").backlogo
+            .descriptionWrapperSp
+              .servicePositionHeader
+                h3 pairs
+                span Head Of iOS, Scrum Master
+              span マッチングサービスpairsの開発に携わる。チームマネジメント、スクラムマスターの経験を通じてチームとして成果を出す働き方を身につける。チームワーク賞、準MVP賞を受賞。
       .descriptionWrapper
         .servicePositionHeader
           h3 pairs
@@ -57,6 +72,11 @@
           .cardBase
             .imgWrapper
               img(src="../static/bd.png").backlogo
+            .descriptionWrapperSp
+              .servicePositionHeader
+                h3 Braindots
+                span Game Engineer
+              span お絵かき物理ゲーム「Braindots」の開発及び設計を行う。全世界で4000万DLを突破。ゲームエンジンCocos2dx上での物理エンジンの取り扱いや、パフォーマンスチューニングにも貢献。
       .descriptionWrapper
         .servicePositionHeader
           h3 Braindots
@@ -72,6 +92,11 @@
           .cardBase
             .imgWrapper
               img(src="../static/bw.png").backlogo
+            .descriptionWrapperSp
+              .servicePositionHeader
+                h3 Brainwars
+                span Game Engineer
+              span リアルタイム脳トレバトルゲーム「Brainwars」の開発、運用に関わる。新機能ゲームの実装や、その他サブ機能の実装などを行う
       .descriptionWrapper
         .servicePositionHeader
           h3 Brainwars
@@ -87,6 +112,12 @@
           .cardBase
             .imgWrapper
               img(src="../static/adstore.png").backlogo
+            .descriptionWrapperSp
+              .servicePositionHeader
+                h3 AdStoreTracking
+                span Software Engineer
+              span 広告効果測定サービスのiOS SDK開発、及びサーバーサイドでの実装を行う。
+
       .descriptionWrapper
         .servicePositionHeader
           h3 AdStoreTracking
@@ -136,6 +167,7 @@ export default Vue.extend({
       justify-content: center;
       align-content: center;
       .descriptionWrapper {
+        z-index:2;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -161,6 +193,7 @@ export default Vue.extend({
       }
     }
     .cardBase {
+      position: relative;
       height: 100%;
       width: 100%;
       padding: 16px;
@@ -170,6 +203,7 @@ export default Vue.extend({
       background-color: white;
       border-radius: 20px;
       .imgWrapper {
+        position: relative;
         display:flex;
         justify-content: center;
         align-items: center;
@@ -187,6 +221,32 @@ export default Vue.extend({
           max-height: 200px;
           width:auto;
           height:auto;
+        }
+      }
+      .descriptionWrapperSp {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 280px;
+        margin-left: 4px;
+        .servicePositionHeader {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          margin-bottom: 8px;
+          padding-bottom: 8px;
+          border-bottom: 1px solid black;
+          @include lato;
+          h3 {
+            font-size: 20px;
+            margin-right: 12px;
+          }
+        }
+        @include mq-up {
+          display: none;
         }
       }
     }

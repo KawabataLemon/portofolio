@@ -36,8 +36,8 @@ export default Vue.extend({
 
 .cardContainer {
       position: relative;
-      width: 400px;
-      height: 300px;
+      width: 360px;
+      height: 260px;
       @include mq-down() {
         width: 300px;
         height: 200px;
