@@ -2,60 +2,97 @@
 .container
   navigation-header(:current-page="'works'")
   section.contents
-    flip-card
-      template(v-slot:front)
-        .cardBase
-          .imgWrapper
-            img(src="../static/cn.png").logo
-      template(v-slot:back)
-        .cardBase
-          .imgWrapper
-            img(src="../static/cn.png").backlogo
-    flip-card
-      template(v-slot:front)
-        .cardBase
-          .imgWrapper
-            img(src="../static/xb.png").logo
-      template(v-slot:back)
-        .cardBase
-          .imgWrapper
-            img(src="../static/xb.png").backlogo
-    flip-card
-      template(v-slot:front)
-        .cardBase
-          .imgWrapper
-            img(src="../static/pairs.png").logo
-      template(v-slot:back)
-        .cardBase
-          .imgWrapper
-            img(src="../static/pairs.png").backlogo
-    flip-card
-      template(v-slot:front)
-        .cardBase
-          .imgWrapper
-            img(src="../static/bd.png").logo
-      template(v-slot:back)
-        .cardBase
-          .imgWrapper
-            img(src="../static/bd.png").backlogo
-    flip-card
-      template(v-slot:front)
-        .cardBase
-          .imgWrapper
-            img(src="../static/bw.png").logo
-      template(v-slot:back)
-        .cardBase
-          .imgWrapper
-            img(src="../static/bw.png").backlogo
-    flip-card
-      template(v-slot:front)
-        .cardBase
-          .imgWrapper
-            img(src="../static/adstore.png").logo
-      template(v-slot:back)
-        .cardBase
-          .imgWrapper
-            img(src="../static/adstore.png").backlogo
+    .flip-contants
+      flip-card
+        template(v-slot:front)
+          .cardBase
+            .imgWrapper
+              img(src="../static/cn.png").logo
+        template(v-slot:back)
+          .cardBase
+            .imgWrapper
+              img(src="../static/cn.png").backlogo
+      .descriptionWrapper
+        .servicePositionHeader
+          h3 Coiney
+          span Client Team Manager, iOS Engineer
+        span 対面型決済サービス「Coiney」の開発に携わる。heyのSTORESブランドの統合やチームマネジメント、コロナ下でのチームの動き方改善などを行う。現職。
+    .flip-contants
+      flip-card
+        template(v-slot:front)
+          .cardBase
+            .imgWrapper
+              img(src="../static/xb.png").logo
+        template(v-slot:back)
+          .cardBase
+            .imgWrapper
+              img(src="../static/xb.png").backlogo
+      .descriptionWrapper
+        .servicePositionHeader
+          h3 xenoBrain
+          span Web Engineer
+        span AIビジネス将来予測形SaaS「xenoBrain」の開発に携わる。新機能開発や、Webフレームワークの導入、開発プロセス改善にも貢献。またWebエンジニアとしてのスキルをみにつける。
+    .flip-contants
+      flip-card
+        template(v-slot:front)
+          .cardBase
+            .imgWrapper
+              img(src="../static/pairs.png").logo
+        template(v-slot:back)
+          .cardBase
+            .imgWrapper
+              img(src="../static/pairs.png").backlogo
+      .descriptionWrapper
+        .servicePositionHeader
+          h3 pairs
+          span Head Of iOS, Scrum Master
+        span マッチングサービスpairsの開発に携わる。チームマネジメント、スクラムマスターの経験を通じてチームとして成果を出す働き方を身につける。チームワーク賞、準MVP賞を受賞。
+    .flip-contants
+      flip-card
+        template(v-slot:front)
+          .cardBase
+            .imgWrapper
+              img(src="../static/bd.png").logo
+        template(v-slot:back)
+          .cardBase
+            .imgWrapper
+              img(src="../static/bd.png").backlogo
+      .descriptionWrapper
+        .servicePositionHeader
+          h3 Braindots
+          span Game Engineer
+        span お絵かき物理ゲーム「Braindots」の開発及び設計を行う。全世界で4000万DLを突破。ゲームエンジンCocos2dx上での物理エンジンの取り扱いや、パフォーマンスチューニングにも貢献。
+    .flip-contants
+      flip-card
+        template(v-slot:front)
+          .cardBase
+            .imgWrapper
+              img(src="../static/bw.png").logo
+        template(v-slot:back)
+          .cardBase
+            .imgWrapper
+              img(src="../static/bw.png").backlogo
+      .descriptionWrapper
+        .servicePositionHeader
+          h3 Brainwars
+          span Game Engineer
+        span リアルタイム脳トレバトルゲーム「Brainwars」の開発、運用に関わる。新機能ゲームの実装や、その他サブ機能の実装などを行う
+    .flip-contants
+      flip-card
+        template(v-slot:front)
+          .cardBase
+            .imgWrapper
+              img(src="../static/adstore.png").logo
+        template(v-slot:back)
+          .cardBase
+            .imgWrapper
+              img(src="../static/adstore.png").backlogo
+      .descriptionWrapper
+        .servicePositionHeader
+          h3 AdStoreTracking
+          span Software Engineer
+        span 広告効果測定サービスのiOS SDK開発、及びサーバーサイドでの実装を行う。
+
 
   navigation-footer(:current-page="'works'")
 </template>
@@ -88,11 +125,40 @@ export default Vue.extend({
   min-height: 100vh;
   background: linear-gradient(to left, $color-primary, $color-secondary);
   .contents{
-    @include mq-down() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .flip-contants {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
-      align-items: center;
+      align-content: center;
+      .descriptionWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 300px;
+        .servicePositionHeader {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          margin-bottom: 8px;
+          padding-bottom: 8px;
+          border-bottom: 1px solid black;
+          @include lato;
+          h3 {
+            font-size: 30px;
+            margin-right: 12px;
+          }
+        }
+        @include mq-down {
+          display: none;
+        }
+      }
     }
     .cardBase {
       height: 100%;
