@@ -54,14 +54,14 @@
               img(src="../static/pairs.png").backlogo
             .descriptionWrapperSp
               .servicePositionHeader
-                h3 pairs
+                h3 Pairs
                 span Head Of iOS, Scrum Master
-              span マッチングサービスpairsの開発に携わる。チームマネジメント、スクラムマスターの経験を通じてチームとして成果を出す働き方を身につける。チームワーク賞、準MVP賞を受賞。
+              span マッチングサービスPairsの開発に携わる。チームマネジメント、スクラムマスターの経験を通じてチームとして成果を出す働き方を身につける。チームワーク賞、準MVP賞を受賞。
       .descriptionWrapper
         .servicePositionHeader
-          h3 pairs
+          h3 Pairs
           span Head Of iOS, Scrum Master
-        span マッチングサービスpairsの開発に携わる。チームマネジメント、スクラムマスターの経験を通じてチームとして成果を出す働き方を身につける。チームワーク賞、準MVP賞を受賞。
+        span マッチングサービスPairsの開発に携わる。チームマネジメント、スクラムマスターの経験を通じてチームとして成果を出す働き方を身につける。チームワーク賞、準MVP賞を受賞。
     .flip-contants
       flip-card
         template(v-slot:front)
