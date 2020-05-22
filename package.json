@@ -9,6 +9,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
+    "deploy" : "nuxt generate && firebase deploy"
   },
   "dependencies": {
     "nuxt": "^2.0.0"
