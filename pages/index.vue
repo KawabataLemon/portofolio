@@ -6,6 +6,7 @@
         section.sp-IconName
           .iconContainer
             .iconWrapper
+              img(src="../static/lemon.png").iconImg
           .nameContainer
             span @KawabataLemon
         section.positionLabel
@@ -35,6 +36,7 @@
       .rightContents
         .iconContainer
           .iconWrapper
+            img(src="../static/lemon.png").iconImg
         .nameContainer
           span @KawabataLemon
     navigation-footer(:current-page="'about'")
@@ -55,6 +57,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 @import "../assets/main";
 @import "../assets/mixin";
+
 
 
 .container {
@@ -147,8 +150,19 @@ export default Vue.extend({
             width: 200px;
             height: 200px;
             background-color: $color-accent;
-            border-radius: 50%;
             margin-bottom: 24px;
+            clip-path: circle(100px at center);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .iconImg {
+              width: 180px;
+              height: 180px;
+              animation-name: fluffying;
+              animation-iteration-count: infinite;
+              animation-delay: 2000ms;
+              animation-duration: 1000ms;
+            }
           }
         }
         .nameContainer {
@@ -210,8 +224,19 @@ export default Vue.extend({
           width: 400px;
           height: 400px;
           background-color: $color-accent;
-          border-radius: 50%;
           margin-bottom: 24px;
+          clip-path: circle(200px at center);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .iconImg {
+            width: 350px;
+            height: 350px;
+            animation-name: fluffying;
+            animation-iteration-count: infinite;
+            animation-delay: 2000ms;
+            animation-duration: 1000ms;
+          }
         }
       }
       .nameContainer {
@@ -227,4 +252,39 @@ export default Vue.extend({
     }
   }
 }
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fluffying {
+  0% {
+    transform: scale(1.0, 1.0);
+  }
+  33% {
+    transform: scale(0.99, 0.99);
+    transform: rotate(10deg);
+  }
+  66% {
+    transform: scale(1.01, 1.01);
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: scale(1.0, 1.0);
+  }
+}
+
+@keyframes slideIn {
+from {
+    margin-left: 100%;
+    margin-top: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    margin-top: 0%;
+  }
+}
+
 </style>
