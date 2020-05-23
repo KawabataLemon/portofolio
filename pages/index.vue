@@ -160,7 +160,6 @@ export default Vue.extend({
               height: 180px;
               animation-name: fluffying;
               animation-iteration-count: infinite;
-              animation-delay: 2000ms;
               animation-duration: 1000ms;
             }
           }
@@ -234,7 +233,6 @@ export default Vue.extend({
             height: 350px;
             animation-name: fluffying;
             animation-iteration-count: infinite;
-            animation-delay: 2000ms;
             animation-duration: 1000ms;
           }
         }
